@@ -35,6 +35,6 @@ def insert_into_mysql(log):
 # Periodisch ausführen und in MySQL einfügen
 while True:
    log_text = get_git_log()
-   if not is_log_in_database(log_text):
-      insert_into_mysql(log_text)
+   if log_text != "ignore" and not is_log_in_database(log_text):
+       insert_into_mysql(log_text)
    time.sleep(5)  # 5 Sekunden warten
