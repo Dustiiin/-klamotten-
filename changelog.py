@@ -9,6 +9,7 @@ cnx = mysql.connector.connect(
    host='localhost',
    database='aurumdev')
 
+
 # Git-Befehl ausführen und Output erhalten
 def get_git_log():
    git_log = subprocess.check_output(['git', 'log', '-1', '--pretty=%B'])
